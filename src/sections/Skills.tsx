@@ -5,8 +5,11 @@ import {
   Code2,
   Globe,
   Layers,
+  Layout,
   Database,
   Wrench,
+  Brain,
+  Bot,
   Sparkles,
   LucideIcon,
 } from "lucide-react";
@@ -17,8 +20,11 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Code2,
   Globe,
   Layers,
+  Layout,
   Database,
   Wrench,
+  Brain,
+  Bot,
   Sparkles,
 };
 
