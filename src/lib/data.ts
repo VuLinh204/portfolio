@@ -133,8 +133,24 @@ export const EXPERIENCE = [
     ],
   },
 ];
+export interface Project {
+  id: string;
+  title: string;
+  role: string;
+  period: string;
+  tech: string[];
+  problem: string;
+  contribution: string;
+  outcome: string;
+  bullets: string[];
+  highlight: boolean;
+  highlightLabel?: string;
+  demo?: string;
+  github?: string;
+  image?: string;
+}
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     id: "gymgear-app",
     title: "GymGear — Social Review & Equipment Booking Platform",

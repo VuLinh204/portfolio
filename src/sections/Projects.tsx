@@ -69,7 +69,7 @@ export default function Projects() {
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2.5 mb-2.5">
                       {/* AI highlight badge */}
-                      {project.highlight && (
+                      {project.highlight && project.highlightLabel && (
                         <span className="inline-flex items-center gap-1.5 px-3 py-0.5 text-[11px] font-mono font-semibold uppercase tracking-wider bg-emerald-400/15 border border-emerald-400/30 text-emerald-300 rounded-full">
                           <Sparkles size={11} />
                           {project.highlightLabel}
@@ -131,10 +131,10 @@ export default function Projects() {
                     >
                       <div className="px-6 pb-8 pt-2 sm:px-8 border-t border-emerald-500/15">
                         {/* Screenshot image (only if image provided) */}
-                        {"image" in project && project.image && (
+                        {project.image && (
                           <div className="mt-4 mb-6 rounded-xl overflow-hidden border border-emerald-500/20">
                             <img
-                              src={project.image as string}
+                              src={project.image}
                               alt={project.title}
                               className="w-full h-auto object-cover max-h-[480px]"
                             />
@@ -142,11 +142,11 @@ export default function Projects() {
                         )}
 
                         {/* Project Links (if demo or github available) */}
-                        {("demo" in project || "github" in project) && (
+                        {(project.demo || project.github) && (
                           <div className="flex flex-wrap items-center gap-3 mb-8">
-                            {"demo" in project && project.demo && (
+                            {project.demo && (
                               <a
-                                href={project.demo as string}
+                                href={project.demo}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-mono text-xs font-semibold tracking-wider uppercase transition-all shadow-[0_0_20px_rgba(52,211,153,0.35)]"
@@ -154,9 +154,9 @@ export default function Projects() {
                                 <ExternalLink size={14} /> Live Demo
                               </a>
                             )}
-                            {"github" in project && project.github && (
+                            {project.github && (
                               <a
-                                href={project.github as string}
+                                href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white border border-emerald-500/30 hover:border-emerald-400 font-mono text-xs font-semibold tracking-wider uppercase transition-all"
