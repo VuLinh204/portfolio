@@ -232,7 +232,7 @@ export default function Hero() {
 
             <a
               href={PERSONAL.cvUrl}
-              download
+              download="VuNgocKhanhLinh_CV.pdf"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-mono text-xs sm:text-sm font-semibold tracking-wider uppercase text-emerald-300 bg-slate-900/80 hover:bg-emerald-950/40 border border-emerald-500/30 hover:border-emerald-400 transition-all duration-300"
             >
               <Download size={14} />

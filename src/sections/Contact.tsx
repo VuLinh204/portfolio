@@ -126,7 +126,7 @@ export default function Contact() {
               </a>
               <a
                 href={PERSONAL.cvUrl}
-                download
+                download="VuNgocKhanhLinh_CV.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900/80 hover:bg-emerald-950/40 text-emerald-300 font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider rounded-xl border border-emerald-500/30 hover:border-emerald-400 transition-all duration-300"
               >
                 <Download size={16} />

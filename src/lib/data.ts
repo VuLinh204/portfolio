@@ -5,13 +5,13 @@
 export const PERSONAL = {
   name: "Vu Ngoc Khanh Linh",
   role: "Software Developer",
-  location: "Ho Chi Minh City, Vietnam",
+  location: "268 Nguyen Thai Son St., Go Vap, Ho Chi Minh City, Vietnam",
   email: "linhlg2004@gmail.com",
   phone: "+84 364 704 715",
   github: "https://github.com/VuLinh204",
   tagline:
     "Software Developer with 1+ year building HR web applications — employee management, LMS, task workflows, and AI-assisted recruitment tools.",
-  cvUrl: "/cv-vu-ngoc-khanh-linh.pdf", // place your PDF in /public
+  cvUrl: "/VuNgocKhanhLinh_Software_Developer.pdf",
 };
 
 export const SKILLS = [

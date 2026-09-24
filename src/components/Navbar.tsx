@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import GithubIcon from "@/components/GithubIcon";
+import { PERSONAL } from "@/lib/data";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
@@ -75,8 +76,8 @@ export default function Navbar() {
               <GithubIcon size={18} />
             </a>
             <a
-              href="/cv-vu-ngoc-khanh-linh.pdf"
-              download
+              href={PERSONAL.cvUrl}
+              download="VuNgocKhanhLinh_CV.pdf"
               className="px-4 py-1.5 text-sm font-medium bg-emerald-500 hover:bg-emerald-400 text-[#031314] rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-emerald-500/25"
             >
               Download CV
@@ -119,8 +120,8 @@ export default function Navbar() {
               ))}
               <li className="pt-2 border-t border-white/5 mt-2">
                 <a
-                  href="/cv-vu-ngoc-khanh-linh.pdf"
-                  download
+                  href={PERSONAL.cvUrl}
+                  download="VuNgocKhanhLinh_CV.pdf"
                   onClick={handleNavClick}
                   className="block px-4 py-2.5 text-center text-sm font-medium bg-emerald-500 hover:bg-emerald-400 text-[#031314] rounded-lg transition-colors"
                 >
