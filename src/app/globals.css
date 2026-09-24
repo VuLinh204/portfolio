@@ -1,0 +1,508 @@
+@import "tailwindcss";
+
+/* ── Custom Design Tokens ── */
+:root {
+  --accent: 52 211 153;
+  --accent-glow: 16 185 129;
+  --surface: 3 18 22;
+  --surface-2: 6 30 34;
+  --surface-3: 10 42 45;
+  --border: 255 255 255 / 0.07;
+  --text-muted: 148 163 184;   /* slate-400 */
+  --poly-r: 12px;
+}
+
+/* ── Base Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: rgb(var(--surface));
+  background-image:
+    radial-gradient(circle at 12% 10%, rgb(22 163 122 / .09), transparent 22rem),
+    radial-gradient(circle at 85% 48%, rgb(8 145 178 / .07), transparent 28rem);
+  color: rgb(248 250 252);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #020c0d; }
+::-webkit-scrollbar-thumb { background: rgb(var(--accent) / 0.35); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(var(--accent) / 0.6); }
+
+/* ── Selection ── */
+::selection { background: rgb(var(--accent) / 0.35); }
+
+/* ── Gradient Helpers ── */
+.gradient-text, .jungle-gradient-text {
+  background: linear-gradient(135deg, rgb(110 231 183), rgb(165 243 252));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =============================================================
+   HERO — New Dramatic Version
+   ============================================================= */
+
+/* Aurora background */
+.hero-aurora-new {
+  background:
+    radial-gradient(ellipse at 68% 32%, rgb(23 142 113 / .22), transparent 35%),
+    radial-gradient(ellipse at 22% 78%, rgb(8 88 100 / .28), transparent 40%),
+    radial-gradient(ellipse at 90% 80%, rgb(5 60 80 / .15), transparent 30%);
+}
+
+/* Grid grain overlay */
+.hero-grain-new {
+  opacity: .18;
+  background-image:
+    linear-gradient(rgb(177 255 220 / .022) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(177 255 220 / .022) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* ── Hero badge ── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 999px;
+  border: 1px solid rgb(52 211 153 / 0.22);
+  background: rgb(52 211 153 / 0.07);
+  font-size: 0.8rem;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgb(167 243 208);
+  backdrop-filter: blur(8px);
+}
+
+/* ── AI tag chip ── */
+.hero-ai-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid rgb(52 211 153 / 0.15);
+  background: rgb(9 37 39 / 0.65);
+  font-size: 0.82rem;
+  color: rgb(148 163 184);
+  backdrop-filter: blur(6px);
+}
+
+/* ── Corner decorators (pantheon.run inspired) ── */
+.hero-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  display: block;
+}
+.hero-corner::before,
+.hero-corner::after {
+  content: "";
+  position: absolute;
+  background: rgb(52 211 153 / 0.5);
+}
+.hero-corner::before { width: 100%; height: 1.5px; top: 0; left: 0; }
+.hero-corner::after  { width: 1.5px; height: 100%; top: 0; left: 0; }
+
+/* =============================================================
+   POLYGON BUTTONS (Pantheon.run style)
+   ============================================================= */
+.poly-btn {
+  --r: 10px;
+  clip-path: polygon(
+    var(--r) 0, calc(100% - var(--r)) 0,
+    100% 0, 100% calc(100% - var(--r)),
+    calc(100% - var(--r)) 100%, var(--r) 100%,
+    0 100%, 0 var(--r)
+  );
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Primary filled polygon button */
+.poly-btn-primary {
+  background: rgb(52 211 153);
+  box-shadow: inset 0 0 40px 0 rgb(52 211 153 / 0.3);
+}
+.poly-btn-primary:hover {
+  background: rgb(110 231 183);
+  box-shadow: inset 0 0 40px 0 rgb(52 211 153 / 0.5), 0 0 24px rgb(52 211 153 / 0.25);
+  transform: translateY(-1px);
+}
+
+/* Ghost polygon button */
+.poly-btn-ghost {
+  background: rgb(255 255 255 / 0.04);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow: inset 0 0 20px 0 rgb(255 255 255 / 0.02);
+}
+.poly-btn-ghost:hover {
+  background: rgb(255 255 255 / 0.08);
+  border-color: rgb(52 211 153 / 0.3);
+  box-shadow: inset 0 0 20px 0 rgb(52 211 153 / 0.06);
+  transform: translateY(-1px);
+}
+
+/* Corner accent decorators on polygon buttons */
+.poly-btn::before,
+.poly-btn::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+.poly-btn-primary::before {
+  width: 14.14px; height: 2px;
+  top: 4px; left: 4px;
+  background: rgb(52 211 153);
+  transform: rotate(-45deg) translateX(-50%);
+  transform-origin: top;
+}
+.poly-btn-primary::after {
+  width: 14.14px; height: 2px;
+  bottom: 4px; right: 4px;
+  background: rgb(52 211 153);
+  transform: rotate(-45deg) translateX(50%);
+}
+.poly-btn-ghost::before {
+  width: 14.14px; height: 1.5px;
+  top: 4px; left: 4px;
+  background: rgb(255 255 255 / 0.15);
+  transform: rotate(-45deg) translateX(-50%);
+  transform-origin: top;
+}
+.poly-btn-ghost::after {
+  width: 14.14px; height: 1.5px;
+  bottom: 4px; right: 4px;
+  background: rgb(255 255 255 / 0.15);
+  transform: rotate(-45deg) translateX(50%);
+}
+
+/* transition */
+.poly-btn { transition: all 0.3s ease; }
+
+/* =============================================================
+   JUNGLE ORB SCENE  (preserved + enhanced)
+   ============================================================= */
+.jungle-hero { background: #031216; isolation: isolate; }
+[class*="text-violet-"] { color: rgb(110 231 183) !important; }
+[class*="bg-violet-600"] { background-color: rgb(5 150 105) !important; }
+[class*="bg-violet-500"] { background-color: rgb(16 185 129 / .14) !important; }
+[class*="border-violet-"] { border-color: rgb(52 211 153 / .25) !important; }
+[class*="shadow-violet-"] { --tw-shadow-color: rgb(16 185 129 / .16) !important; }
+.hero-aurora { background: radial-gradient(circle at 76% 36%, rgb(23 142 113 / .23), transparent 22%), radial-gradient(ellipse at 14% 90%, rgb(8 88 100 / .34), transparent 40%), linear-gradient(115deg, #031216 20%, #062126 65%, #04171a); }
+.hero-grain { opacity: .22; background-image: linear-gradient(rgb(177 255 220 / .025) 1px, transparent 1px), linear-gradient(90deg, rgb(177 255 220 / .025) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent); }
+
+.jungle-scene {
+  position: relative;
+  perspective: 1000px;
+  isolation: isolate;
+  border-radius: 42% 58% 49% 51% / 44% 42% 58% 56%;
+  filter: drop-shadow(0 24px 22px rgb(0 0 0 / .28));
+  background:
+    radial-gradient(circle at 57% 34%, rgb(125 255 203 / .13), transparent 12%),
+    radial-gradient(circle at 48% 53%, rgb(14 79 65 / .28), transparent 48%);
+}
+.jungle-scene > * { transform-style: preserve-3d; }
+.jungle-scene::before {
+  content: "";
+  position: absolute; inset: -8%; z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(61 240 165 / .11) 0 2px, transparent 3px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle, black 35%, transparent 70%);
+}
+.jungle-scene::after {
+  content: ""; position: absolute; z-index: 30; inset: 10% 10%;
+  pointer-events: none; border-radius: inherit;
+  border: 1px solid rgb(205 255 233 / .17);
+  box-shadow: inset 15px 12px 22px rgb(224 255 240 / .06), inset -22px -28px 32px rgb(0 0 0 / .3);
+}
+.jungle-orb {
+  position: absolute; inset: 9% 8%;
+  border: 1px solid rgb(189 255 224 / .34);
+  border-radius: 48% 52% 45% 55% / 53% 43% 57% 47%;
+  background:
+    radial-gradient(ellipse at 31% 20%, rgb(211 255 232 / .27), transparent 10%),
+    radial-gradient(circle at 57% 41%, rgb(36 198 137 / .23), transparent 23%),
+    radial-gradient(ellipse at 50% 94%, #092c2a 0 15%, transparent 16%),
+    linear-gradient(145deg, #154f45 0%, #083630 36%, #041b1c 76%);
+  box-shadow:
+    inset 18px 15px 35px rgb(169 255 208 / .11),
+    inset -36px -36px 42px rgb(0 0 0 / .52),
+    0 28px 60px rgb(0 0 0 / .38),
+    0 0 60px rgb(45 221 160 / .14);
+  will-change: transform;
+  animation: terrarium-float 8s ease-in-out infinite;
+}
+.jungle-moon {
+  position: absolute; z-index: 12; top: 17%; right: 26%; width: 13%;
+  aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 35% 32%, #effff5, #94ffd1 65%, #31b882);
+  box-shadow: 0 0 18px rgb(160 255 210 / .76), 0 0 45px rgb(60 245 174 / .28);
+  will-change: transform, opacity;
+  animation: moon-glow 5s ease-in-out infinite;
+}
+.jungle-haze { position: absolute; z-index: 11; filter: blur(24px); background: rgb(132 255 199 / .19); }
+.haze-one { width: 42%; height: 9%; top: 48%; left: 28%; }
+.haze-two { width: 30%; height: 7%; top: 67%; right: 21%; }
+.jungle-trunk { position: absolute; z-index: 10; width: 7%; background: linear-gradient(90deg, #021617, #1e5e49 48%, #092d28); box-shadow: inset 2px 0 3px rgb(215 255 224 / .22), 9px 10px 15px rgb(0 0 0 / .22); }
+.trunk-back { height: 56%; bottom: 18%; left: 36%; transform: rotate(-18deg); }
+.trunk-front { height: 48%; bottom: 8%; right: 35%; transform: rotate(20deg); }
+.jungle-leaf {
+  position: absolute; z-index: 14; width: 23%; height: 11%;
+  border-radius: 100% 0 100% 0;
+  background: linear-gradient(135deg, #a6f2a9 0%, #48b76b 34%, #126447 70%, #082e2a);
+  border: 1px solid rgb(192 255 202 / .08);
+  box-shadow: inset 3px 3px 5px rgb(230 255 221 / .25), 8px 10px 13px rgb(0 0 0 / .2);
+  animation: none;
+}
+.leaf-one { top: 24%; left: 23%; }
+.leaf-two { top: 40%; left: 17%; }
+.leaf-three { top: 59%; left: 23%; }
+.leaf-four { top: 29%; right: 18%; }
+.leaf-five { top: 52%; right: 14%; }
+.leaf-six { bottom: 19%; left: 39%; }
+.jungle-fern {
+  position: absolute; z-index: 17; bottom: 12%; width: 31%; height: 20%;
+  opacity: .86;
+  background:
+    linear-gradient(125deg, transparent 0 35%, #81d47e 36% 43%, transparent 44% 100%),
+    repeating-linear-gradient(16deg, transparent 0 13px, rgb(66 159 94 / .85) 14px 19px, transparent 20px 32px);
+  clip-path: polygon(49% 100%, 0 21%, 43% 47%, 20% 0, 57% 40%, 75% 0, 62% 48%, 100% 20%);
+}
+.fern-left { left: 12%; transform: rotate(-8deg); }
+.fern-right { right: 10%; transform: scaleX(-1) rotate(-8deg); }
+.jungle-ground { position: absolute; z-index: 18; bottom: 10%; left: 21%; width: 59%; height: 8%; background: radial-gradient(ellipse, #479c61, #123f33 60%, transparent 72%); }
+.jungle-ring { position: absolute; border-radius: 50%; box-shadow: 0 0 22px rgb(82 243 175 / .07); }
+.ring-one { z-index: 25; inset: 5% 6%; border: 1px solid rgb(191 255 221 / .29); }
+.ring-two { z-index: 25; inset: 13% 14%; border: 1px solid rgb(137 255 199 / .14); }
+.jungle-caption { position: absolute; z-index: 31; right: 13%; bottom: 8%; color: rgb(209 255 230 / .7); font-size: 9px; font-weight: 700; letter-spacing: .18em; text-shadow: 0 2px 8px #021415; }
+
+@keyframes terrarium-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotateX(5deg) rotateY(-8deg); }
+  50%       { transform: translate3d(0, -7px, 0) rotateX(6deg) rotateY(-6deg); }
+}
+@keyframes moon-glow {
+  0%, 100% { opacity: .84; transform: translateZ(0) scale(.96); }
+  50%       { opacity: 1;   transform: translateZ(0) scale(1.03); }
+}
+@keyframes leaf-sway {
+  0%, 100% { margin-top: 0; }
+  50%       { margin-top: -8px; }
+}
+@media (max-width: 639px) {
+  .jungle-orb, .jungle-moon { animation: none; }
+  .jungle-scene { filter: none; transform: scale(.92); margin-top: -14px; margin-bottom: -18px; }
+}
+
+/* =============================================================
+   SCROLL REVEAL SYSTEM — useInView via Framer
+   Every section uses: data-reveal on children
+   ============================================================= */
+
+/* Section entrance default (overridden by framer) */
+[data-reveal] {
+  will-change: transform, opacity;
+}
+
+/* =============================================================
+   STORY ROOMS — Section Containers
+   ============================================================= */
+.story-room {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-top: 1px solid rgb(188 255 220 / .07);
+  background: linear-gradient(118deg, #04191b, #062527 55%, #031618);
+}
+.story-room::before {
+  content: attr(data-room);
+  position: absolute; z-index: -1;
+  top: -5.5rem; right: clamp(1rem, 7vw, 7rem);
+  color: rgb(157 255 205 / .03);
+  font-size: clamp(11rem, 27vw, 25rem);
+  line-height: 1; font-weight: 800; letter-spacing: -.1em;
+  user-select: none;
+}
+.story-room::after {
+  content: "";
+  position: absolute; z-index: -1; inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgb(163 255 210 / .022) 1px, transparent 1px),
+    linear-gradient(rgb(163 255 210 / .016) 1px, transparent 1px);
+  background-size: 90px 90px;
+  mask-image: linear-gradient(90deg, transparent, black 35%, black 65%, transparent);
+}
+.room-skills, .room-experience, .room-contact {
+  background: linear-gradient(118deg, #031416, #08282a 54%, #04191b);
+}
+.room-projects {
+  background:
+    radial-gradient(circle at 82% 26%, rgb(25 158 110 / .12), transparent 24rem),
+    linear-gradient(118deg, #04191b, #062124 55%, #031618);
+}
+.story-heading { position: relative; }
+.story-heading::before {
+  content: "ENTER THE NEXT ROOM";
+  display: block; margin-bottom: .75rem;
+  color: rgb(137 255 197 / .5);
+  font-size: .65rem; font-weight: 700; letter-spacing: .26em;
+  font-family: ui-monospace, monospace;
+}
+.story-heading h2 { letter-spacing: -.045em; text-wrap: balance; }
+.story-heading p  { text-wrap: balance; }
+
+.story-badge {
+  position: relative;
+  border-color: rgb(105 242 173 / .24) !important;
+  background: rgb(59 209 137 / .08) !important;
+  color: rgb(162 255 207) !important;
+}
+.depth-card {
+  background-color: rgb(6 35 37 / .86) !important;
+  backdrop-filter: blur(10px);
+}
+.room-projects .depth-card,
+.room-projects [class*="bg-[#16162b]"] {
+  background-color: rgb(5 32 34 / .9) !important;
+}
+
+@media (min-width: 768px) {
+  .story-room { min-height: 68vh; display: flex; align-items: center; }
+  .story-room > div { width: 100%; }
+}
+@media (max-width: 639px) {
+  .story-room::after { background-size: 56px 56px; }
+  .story-heading::before { letter-spacing: .18em; }
+}
+
+/* =============================================================
+   GRADIENT BORDER
+   ============================================================= */
+.gradient-border { position: relative; }
+.gradient-border::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgb(var(--accent) / 0.6), transparent 60%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Glow Effect ── */
+.glow { box-shadow: 0 0 40px rgb(var(--accent) / 0.15), 0 0 80px rgb(var(--accent) / 0.06); }
+.glow-text { text-shadow: 0 0 30px rgb(var(--accent) / 0.5); }
+
+/* ── Section Padding ── */
+.section-py { padding-top: 6rem; padding-bottom: 6rem; }
+@media (min-width: 768px) { .section-py { padding-top: 8rem; padding-bottom: 8rem; } }
+
+/* ── Noise Texture ── */
+.noise { position: relative; isolation: isolate; }
+.noise::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: -1;
+  border-radius: inherit;
+}
+
+/* =============================================================
+   SECTION SCROLL REVEAL — Applied via Framer Motion in components
+   These are helper classes for section transitions
+   ============================================================= */
+
+/* Horizontal divider line that sweeps in */
+.section-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(52 211 153 / 0.4), transparent);
+  transform-origin: left;
+}
+
+/* Counter number animation target */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Card with clip-path matching polygon buttons */
+.poly-card {
+  --r: 14px;
+  clip-path: polygon(
+    var(--r) 0, calc(100% - var(--r)) 0,
+    100% 0, 100% calc(100% - var(--r)),
+    calc(100% - var(--r)) 100%, var(--r) 100%,
+    0 100%, 0 var(--r)
+  );
+  position: relative;
+  background: rgb(6 35 37 / 0.86);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.poly-card::before,
+.poly-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  background: rgb(52 211 153 / 0.35);
+  transition: background 0.3s;
+}
+.poly-card::before { /* top-left corner */
+  width: 19.8px; height: 1.5px;
+  top: 5.5px; left: 5.5px;
+  transform: rotate(-45deg) translateX(-50%);
+  transform-origin: top;
+}
+.poly-card::after { /* bottom-right corner */
+  width: 19.8px; height: 1.5px;
+  bottom: 5.5px; right: 5.5px;
+  transform: rotate(-45deg) translateX(50%);
+}
+.poly-card:hover {
+  border-color: rgb(52 211 153 / 0.28);
+  box-shadow: inset 0 0 28px rgb(52 211 153 / 0.05), 0 0 0 1px rgb(52 211 153 / 0.1);
+}
+.poly-card:hover::before,
+.poly-card:hover::after {
+  background: rgb(52 211 153 / 0.65);
+}
+
+/* =============================================================
+   REDUCED MOTION
+   ============================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
