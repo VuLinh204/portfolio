@@ -11,29 +11,13 @@ import {
   Target,
   Lightbulb,
   TrendingUp,
+  ExternalLink,
 } from "lucide-react";
+import GithubIcon from "@/components/GithubIcon";
 import SectionHeader from "@/components/SectionHeader";
 import { PROJECTS } from "@/lib/data";
 
-/**
- * Placeholder screenshot component shown when no real screenshot is available.
- */
-function ScreenshotPlaceholder({ title }: { title: string }) {
-  return (
-    <div className="w-full aspect-video rounded-xl bg-gradient-to-br from-[#02181c] to-[#011113] border border-emerald-500/20 flex flex-col items-center justify-center gap-3 text-slate-500 relative overflow-hidden group">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(52,211,153,0.06),transparent_70%)] pointer-events-none" />
-      <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-        <Code2 size={26} />
-      </div>
-      <div className="text-center z-10 px-4">
-        <p className="text-sm font-semibold text-slate-200">
-          {title}
-        </p>
-        <p className="text-xs text-slate-500 mt-1 font-mono">Production Application Interface</p>
-      </div>
-    </div>
-  );
-}
+
 
 /**
  * Projects section — case-study cards that expand to reveal full details.
@@ -146,10 +130,42 @@ export default function Projects() {
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-8 pt-2 sm:px-8 border-t border-emerald-500/15">
-                        {/* Screenshot Placeholder */}
-                        <div className="mt-4 mb-8">
-                          <ScreenshotPlaceholder title={project.title} />
-                        </div>
+                        {/* Screenshot image (only if image provided) */}
+                        {"image" in project && project.image && (
+                          <div className="mt-4 mb-6 rounded-xl overflow-hidden border border-emerald-500/20">
+                            <img
+                              src={project.image as string}
+                              alt={project.title}
+                              className="w-full h-auto object-cover max-h-[480px]"
+                            />
+                          </div>
+                        )}
+
+                        {/* Project Links (if demo or github available) */}
+                        {("demo" in project || "github" in project) && (
+                          <div className="flex flex-wrap items-center gap-3 mb-8">
+                            {"demo" in project && project.demo && (
+                              <a
+                                href={project.demo as string}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-mono text-xs font-semibold tracking-wider uppercase transition-all shadow-[0_0_20px_rgba(52,211,153,0.35)]"
+                              >
+                                <ExternalLink size={14} /> Live Demo
+                              </a>
+                            )}
+                            {"github" in project && project.github && (
+                              <a
+                                href={project.github as string}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white border border-emerald-500/30 hover:border-emerald-400 font-mono text-xs font-semibold tracking-wider uppercase transition-all"
+                              >
+                                <GithubIcon size={14} /> GitHub Repository
+                              </a>
+                            )}
+                          </div>
+                        )}
 
                         {/* Case Study Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">

@@ -5,7 +5,7 @@
 export const PERSONAL = {
   name: "Vu Ngoc Khanh Linh",
   role: "Software Developer",
-  location: "268 Nguyen Thai Son St., Go Vap, Ho Chi Minh City, Vietnam",
+  location: "Hanh Thong Ward, Ho Chi Minh City, Vietnam",
   email: "linhlg2004@gmail.com",
   phone: "+84 364 704 715",
   github: "https://github.com/VuLinh204",
@@ -18,32 +18,103 @@ export const SKILLS = [
   {
     category: "Languages",
     icon: "Code2",
-    items: ["JavaScript", "PHP", "SQL"],
+    items: [
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "SQL",
+    ],
   },
   {
     category: "Web",
     icon: "Globe",
-    items: ["HTML5", "CSS3", "jQuery", "Bootstrap"],
+    items: [
+      "HTML5",
+      "CSS3",
+      "jQuery",
+      "AJAX",
+      "Bootstrap",
+      "Responsive Design",
+      "Web APIs",
+    ],
   },
   {
-    category: "Frameworks & UI",
+    category: "Frameworks",
     icon: "Layers",
-    items: ["Laravel", "DevExtreme", "DevExpress UI"],
+    items: [
+      "Laravel",
+      "Node.js",
+    ],
+  },
+  {
+    category: "UI & Libraries",
+    icon: "Layout",
+    items: [
+      "DevExpress",
+      "DevExtreme",
+      "Bootstrap",
+      "jQuery UI",
+    ],
   },
   {
     category: "Database",
     icon: "Database",
-    items: ["SQL Server", "Stored Procedures", "Query Optimization"],
+    items: [
+      "SQL Server",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Supabase",
+      "Stored Procedures",
+      "Query Optimization",
+    ],
   },
   {
-    category: "Tools & APIs",
+    category: "Tools & DevOps",
     icon: "Wrench",
-    items: ["Git", "Postman", "OpenAI API", "Gemini API"],
+    items: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Docker Compose",
+      "Postman",
+      "Figma",
+      "VS Code",
+      "Chrome DevTools",
+    ],
+  },
+  {
+    category: "AI",
+    icon: "Brain",
+    items: [
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "Grok",
+      "DeepSeek",
+      "Google AI Studio",
+      "Google Stitch",
+    ],
+  },
+  {
+    category: "AI Development",
+    icon: "Bot",
+    items: [
+      "Cursor",
+      "GitHub Copilot",
+      "Codex",
+      "Claude Code",
+      "Antigravity",
+    ],
   },
   {
     category: "Currently Learning",
     icon: "Sparkles",
-    items: ["React", "Next.js"],
+    items: [
+      "React.js",
+      "Next.js",
+      "AI Agent",
+    ],
   },
 ];
 
@@ -64,6 +135,37 @@ export const EXPERIENCE = [
 ];
 
 export const PROJECTS = [
+  {
+    id: "gymgear-app",
+    title: "GymGear — Social Review & Equipment Booking Platform",
+    role: "Full-Stack Developer",
+    period: "2026",
+    demo: "https://gymgear-app.vercel.app/",
+    github: "https://github.com/VuLinh204/gymgear-app",
+    tech: [
+      "Next.js 15 (App Router)",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "GymGear AI",
+      "OriginKit Theme Engine",
+      "Vercel",
+    ],
+    problem:
+      "Gym owners and fitness practitioners lacked a dedicated platform to discover authentic equipment reviews, compare mechanical specifications, and book physical trial sessions at nearby showrooms.",
+    contribution:
+      "Ideated, architected, and built the entire social web application end-to-end: interactive review feed, free showroom trial booking pipeline, embedded GymGear AI workout assistant, multi-attribute gear filtering, and dynamic multi-theme engine.",
+    outcome:
+      "Successfully deployed to production on Vercel with high performance and mobile-first responsiveness; empowered users with 24/7 AI-guided gear recommendations and automated booking workflows.",
+    bullets: [
+      "Built a specialized community platform for gym equipment reviews and showroom booking",
+      "Integrated GymGear AI conversational assistant with intelligent hotkey navigation (Ctrl + K)",
+      "Engineered dynamic Theme Switcher (OriginKit Style) with dark/light themes and multi-language support",
+      "Delivered a responsive, high-performance UI leveraging Next.js App Router and Tailwind CSS",
+    ],
+    highlight: true,
+    highlightLabel: "Fullstack & AI",
+  },
   {
     id: "paradise-hr",
     title: "ParadiseHR — LMS & Task Management",
