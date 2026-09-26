@@ -202,7 +202,7 @@ export default function Hero() {
           >
             <div className="flex flex-col px-2 border-r border-slate-800">
               <span className="text-lg sm:text-xl font-bold text-white font-mono flex items-center gap-1">
-                1+ <span className="text-emerald-400 text-xs font-normal">YR</span>
+                2+ <span className="text-emerald-400 text-xs font-normal">YR</span>
               </span>
               <span className="text-[11px] text-slate-400 uppercase tracking-wider">Experience</span>
             </div>
