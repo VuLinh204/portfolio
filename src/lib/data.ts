@@ -10,7 +10,7 @@ export const PERSONAL = {
   phone: "+84 364 704 715",
   github: "https://github.com/VuLinh204",
   tagline:
-    "Software Developer with 2+ years building HR web applications - employee management, LMS, task workflows, and AI-assisted recruitment tools.",
+    "Software Developer with 2+ years building web applications across different domains - from business systems and workflow tools to AI-powered products.",
   cvUrl: "/VuNgocKhanhLinh_Software_Developer.pdf",
 };
 

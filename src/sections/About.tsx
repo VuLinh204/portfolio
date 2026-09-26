@@ -23,7 +23,7 @@ const CONTACT_INFO = [
 ];
 
 const HIGHLIGHTS = [
-  "2+ years of professional experience in HR software",
+  "2+ years of professional software development experience across different domains",
   "Delivered AI-powered tools for job description & interview generation",
   "Built LMS modules, Kanban boards, and payroll systems",
   "Optimised SQL Server stored procedures for complex data workflows",
@@ -49,9 +49,11 @@ export default function About() {
             <div className="prose prose-invert prose-slate max-w-none">
               <p className="text-slate-300 text-base leading-relaxed mb-6">
                 I&apos;m a Software Developer based in Ho Chi Minh City with over
-                a year of hands-on experience building enterprise HR web
-                applications at Vietinsoft. My work spans employee records,
-                training modules, task management, and recruitment automation.
+                two years of hands-on experience building web applications
+                across different domains, including enterprise HR systems at
+                Vietinsoft. My work spans employee records, training modules,
+                task management, and recruitment automation, alongside projects
+                in other areas.
               </p>
               <p className="text-slate-400 text-base leading-relaxed mb-6">
                 What sets me apart is my practical experience integrating{" "}

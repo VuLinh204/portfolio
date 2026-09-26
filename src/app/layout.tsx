@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Vu Ngoc Khanh Linh - Software Developer",
   description:
-    "Software Developer with 2+ years building HR web applications - employee management, LMS, task workflows, and AI-assisted recruitment tools. Based in Ho Chi Minh City, Vietnam.",
+    "Software Developer with 2+ years building web applications across different domains - from business systems and workflow tools to AI-powered products. Based in Ho Chi Minh City, Vietnam.",
   keywords: [
     "Software Developer",
     "Frontend Developer",
