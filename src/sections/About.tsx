@@ -23,7 +23,7 @@ const CONTACT_INFO = [
 ];
 
 const HIGHLIGHTS = [
-  "1+ year of professional experience in HR software",
+  "2+ years of professional experience in HR software",
   "Delivered AI-powered tools for job description & interview generation",
   "Built LMS modules, Kanban boards, and payroll systems",
   "Optimised SQL Server stored procedures for complex data workflows",
