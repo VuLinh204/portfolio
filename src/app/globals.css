@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ── Custom Design Tokens ── */
+/* -- Custom Design Tokens -- */
 :root {
   --accent: 52 211 153;
   --accent-glow: 16 185 129;
@@ -12,7 +12,7 @@
   --poly-r: 12px;
 }
 
-/* ── Base Reset ── */
+/* -- Base Reset -- */
 *,
 *::before,
 *::after {
@@ -34,16 +34,16 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Scrollbar ── */
+/* -- Scrollbar -- */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #020c0d; }
 ::-webkit-scrollbar-thumb { background: rgb(var(--accent) / 0.35); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: rgb(var(--accent) / 0.6); }
 
-/* ── Selection ── */
+/* -- Selection -- */
 ::selection { background: rgb(var(--accent) / 0.35); }
 
-/* ── Gradient Helpers ── */
+/* -- Gradient Helpers -- */
 .gradient-text, .jungle-gradient-text {
   background: linear-gradient(135deg, rgb(110 231 183), rgb(165 243 252));
   -webkit-background-clip: text;
@@ -52,7 +52,7 @@ body {
 }
 
 /* =============================================================
-   HERO — New Dramatic Version
+  HERO - New Dramatic Version
    ============================================================= */
 
 /* Aurora background */
@@ -73,7 +73,7 @@ body {
   mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
 }
 
-/* ── Hero badge ── */
+/* -- Hero badge -- */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -90,7 +90,7 @@ body {
   backdrop-filter: blur(8px);
 }
 
-/* ── AI tag chip ── */
+/* -- AI tag chip -- */
 .hero-ai-tag {
   display: inline-flex;
   align-items: center;
@@ -104,7 +104,7 @@ body {
   backdrop-filter: blur(6px);
 }
 
-/* ── Corner decorators (pantheon.run inspired) ── */
+/* -- Corner decorators (pantheon.run inspired) -- */
 .hero-corner {
   position: absolute;
   width: 16px;
@@ -318,7 +318,7 @@ body {
 }
 
 /* =============================================================
-   SCROLL REVEAL SYSTEM — useInView via Framer
+  SCROLL REVEAL SYSTEM - useInView via Framer
    Every section uses: data-reveal on children
    ============================================================= */
 
@@ -328,7 +328,7 @@ body {
 }
 
 /* =============================================================
-   STORY ROOMS — Section Containers
+  STORY ROOMS - Section Containers
    ============================================================= */
 .story-room {
   position: relative;
@@ -416,15 +416,15 @@ body {
   pointer-events: none;
 }
 
-/* ── Glow Effect ── */
+/* -- Glow Effect -- */
 .glow { box-shadow: 0 0 40px rgb(var(--accent) / 0.15), 0 0 80px rgb(var(--accent) / 0.06); }
 .glow-text { text-shadow: 0 0 30px rgb(var(--accent) / 0.5); }
 
-/* ── Section Padding ── */
+/* -- Section Padding -- */
 .section-py { padding-top: 6rem; padding-bottom: 6rem; }
 @media (min-width: 768px) { .section-py { padding-top: 8rem; padding-bottom: 8rem; } }
 
-/* ── Noise Texture ── */
+/* -- Noise Texture -- */
 .noise { position: relative; isolation: isolate; }
 .noise::after {
   content: "";
@@ -435,7 +435,7 @@ body {
 }
 
 /* =============================================================
-   SECTION SCROLL REVEAL — Applied via Framer Motion in components
+  SECTION SCROLL REVEAL - Applied via Framer Motion in components
    These are helper classes for section transitions
    ============================================================= */
 

@@ -20,7 +20,7 @@ import { PROJECTS } from "@/lib/data";
 
 
 /**
- * Projects section — case-study cards that expand to reveal full details.
+ * Projects section - case-study cards that expand to reveal full details.
  */
 export default function Projects() {
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -34,7 +34,7 @@ export default function Projects() {
         <SectionHeader
           badge="Projects"
           title="Featured Work"
-          subtitle="Real projects shipped in production — each presented as a case study."
+          subtitle="Real projects shipped in production - each presented as a case study."
         />
 
         <div className="space-y-5">
@@ -58,7 +58,7 @@ export default function Projects() {
                     : "border-emerald-500/15 bg-[#031518]/90 hover:border-emerald-400/30 hover:bg-[#031a1e]"
                 }`}
               >
-                {/* ── Card Header (always visible) ── */}
+                {/* -- Card Header (always visible) -- */}
                 <button
                   onClick={() => toggle(project.id)}
                   className="w-full text-left p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center gap-4 group cursor-pointer"
@@ -117,7 +117,7 @@ export default function Projects() {
                   </div>
                 </button>
 
-                {/* ── Expanded Body ── */}
+                {/* -- Expanded Body -- */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div

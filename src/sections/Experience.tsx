@@ -6,7 +6,7 @@ import SectionHeader from "@/components/SectionHeader";
 import { EXPERIENCE } from "@/lib/data";
 
 /**
- * Experience section — timeline layout for work history.
+ * Experience section - timeline layout for work history.
  */
 export default function Experience() {
   return (

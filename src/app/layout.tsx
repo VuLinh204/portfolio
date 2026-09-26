@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Vu Ngoc Khanh Linh — Software Developer",
+  title: "Vu Ngoc Khanh Linh - Software Developer",
   description:
-    "Software Developer with 1+ year building HR web applications — employee management, LMS, task workflows, and AI-assisted recruitment tools. Based in Ho Chi Minh City, Vietnam.",
+    "Software Developer with 1+ year building HR web applications - employee management, LMS, task workflows, and AI-assisted recruitment tools. Based in Ho Chi Minh City, Vietnam.",
   keywords: [
     "Software Developer",
     "Frontend Developer",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Vu Ngoc Khanh Linh", url: "https://github.com/VuLinh204" }],
   openGraph: {
-    title: "Vu Ngoc Khanh Linh — Software Developer",
+    title: "Vu Ngoc Khanh Linh - Software Developer",
     description:
       "Building HR web apps & AI-powered recruitment tools in Ho Chi Minh City.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vu Ngoc Khanh Linh — Software Developer",
+    title: "Vu Ngoc Khanh Linh - Software Developer",
     description:
       "Building HR web apps & AI-powered recruitment tools in Ho Chi Minh City.",
   },

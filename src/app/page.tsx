@@ -8,7 +8,7 @@ import Contact from "@/sections/Contact";
 import Footer from "@/components/Footer";
 
 /**
- * Home page — assembles all portfolio sections in order.
+ * Home page - assembles all portfolio sections in order.
  * Each section is a self-contained component in /src/sections/.
  */
 export default function Home() {

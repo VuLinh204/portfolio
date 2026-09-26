@@ -20,7 +20,7 @@ const CONTACT_METHODS = [
     label: "Phone",
     value: PERSONAL.phone,
     href: `tel:${PERSONAL.phone.replace(/\s/g, "")}`,
-    description: "Available Mon–Fri",
+    description: "Available Mon-Fri",
     cta: "Call Now",
   },
   {
@@ -114,7 +114,7 @@ export default function Contact() {
             </h3>
             <p className="text-slate-300 text-sm sm:text-base max-w-lg mx-auto mb-8 leading-relaxed">
               Whether it&apos;s fullstack web applications, HR systems, or
-              AI-assisted product tools — I&apos;m ready to contribute immediately.
+              AI-assisted product tools - I&apos;m ready to contribute immediately.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a

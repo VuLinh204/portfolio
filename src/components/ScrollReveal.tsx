@@ -3,7 +3,7 @@
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef, ReactNode } from "react";
 
-/* ── Scroll-triggered fade+slide reveal ── */
+/* -- Scroll-triggered fade+slide reveal -- */
 
 interface RevealProps {
   children: ReactNode;
@@ -58,7 +58,7 @@ export function Reveal({
   );
 }
 
-/* ── Stagger container for child items ── */
+/* -- Stagger container for child items -- */
 
 interface StaggerProps {
   children: ReactNode;
@@ -94,7 +94,7 @@ export function StaggerReveal({
   );
 }
 
-/* ── Individual stagger item ── */
+/* -- Individual stagger item -- */
 export function StaggerItem({
   children,
   className,
@@ -115,7 +115,7 @@ export function StaggerItem({
   );
 }
 
-/* ── Section clip reveal (dramatic scale+clip entry) ── */
+/* -- Section clip reveal (dramatic scale+clip entry) -- */
 export function ClipReveal({
   children,
   className,
@@ -141,7 +141,7 @@ export function ClipReveal({
   );
 }
 
-/* ── Word-by-word text reveal ── */
+/* -- Word-by-word text reveal -- */
 export function WordReveal({
   text,
   className,

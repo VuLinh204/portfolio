@@ -6,7 +6,7 @@ import SectionHeader from "@/components/SectionHeader";
 import { EDUCATION } from "@/lib/data";
 
 /**
- * Education section — clean card layout for academic credentials.
+ * Education section - clean card layout for academic credentials.
  */
 export default function Education() {
   return (

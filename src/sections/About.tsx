@@ -31,7 +31,7 @@ const HIGHLIGHTS = [
 ];
 
 /**
- * About section — personal summary + contact details.
+ * About section - personal summary + contact details.
  */
 export default function About() {
   return (
@@ -40,11 +40,11 @@ export default function About() {
         <SectionHeader
           badge="About Me"
           title="A Developer Who Ships"
-          subtitle="I build practical web apps that solve real business problems — from complex HR workflows to AI-assisted content tools."
+          subtitle="I build practical web apps that solve real business problems - from complex HR workflows to AI-assisted content tools."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* ── Left — Bio ── */}
+          {/* -- Left - Bio -- */}
           <Reveal direction="left" delay={0.1}>
             <div className="prose prose-invert prose-slate max-w-none">
               <p className="text-slate-300 text-base leading-relaxed mb-6">
@@ -58,7 +58,7 @@ export default function About() {
                 <span className="text-emerald-300 font-medium">
                   OpenAI and Gemini APIs
                 </span>{" "}
-                into real production tools — automating job descriptions and
+                into real production tools - automating job descriptions and
                 interview question generation for HR teams. I&apos;m not just
                 learning AI; I&apos;ve shipped it.
               </p>
@@ -85,7 +85,7 @@ export default function About() {
             </div>
           </Reveal>
 
-          {/* ── Right — Highlights + Contact ── */}
+          {/* -- Right - Highlights + Contact -- */}
           <div className="flex flex-col gap-8">
             {/* Key Highlights */}
             <Reveal direction="right" delay={0.15}>

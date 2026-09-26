@@ -1,5 +1,5 @@
 /**
- * GitHub SVG icon — lucide-react does not export a GitHub icon,
+ * GitHub SVG icon - lucide-react does not export a GitHub icon,
  * so we use the official GitHub mark path directly.
  */
 export default function GithubIcon({

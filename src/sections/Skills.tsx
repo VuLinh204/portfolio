@@ -29,7 +29,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
 };
 
 /**
- * Skills section — grouped skill categories displayed as animated cards with emerald/cyan theme.
+ * Skills section - grouped skill categories displayed as animated cards with emerald/cyan theme.
  */
 export default function Skills() {
   return (
@@ -38,7 +38,7 @@ export default function Skills() {
         <SectionHeader
           badge="Skills"
           title="Tools & Technologies"
-          subtitle="A curated stack built through real project delivery — not just tutorials."
+          subtitle="A curated stack built through real project delivery - not just tutorials."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

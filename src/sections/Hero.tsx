@@ -20,7 +20,7 @@ import {
 import GithubIcon from "@/components/GithubIcon";
 import { PERSONAL } from "@/lib/data";
 
-/* ─── Typewriter / Cycling Role Hook ─── */
+/* --- Typewriter / Cycling Role Hook --- */
 const ROLES = [
   "Software Developer",
   "Fullstack Web Builder",
@@ -42,7 +42,7 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  /* ── Scroll-driven exit parallax ── */
+  /* -- Scroll-driven exit parallax -- */
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -54,7 +54,7 @@ export default function Hero() {
   const opacity = useSpring(rawOpacity, { stiffness: 90, damping: 25 });
   const y = useSpring(rawY, { stiffness: 90, damping: 25 });
 
-  /* ── Mouse tilt for interactive Terminal Card ── */
+  /* -- Mouse tilt for interactive Terminal Card -- */
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
   const rotX = useTransform(mouseY, [0, 1], [6, -6]);
@@ -81,7 +81,7 @@ export default function Hero() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  /* ── Stagger animations ── */
+  /* -- Stagger animations -- */
   const stagger: Variants = {
     hidden: {},
     show: { transition: { staggerChildren: 0.08 } },
@@ -104,7 +104,7 @@ export default function Hero() {
         background: "radial-gradient(ellipse at 50% 0%, #032024 0%, #020f12 55%, #010809 100%)",
       }}
     >
-      {/* ── Background Grid & Aurora Ambient ── */}
+      {/* -- Background Grid & Aurora Ambient -- */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none opacity-25"
@@ -126,12 +126,12 @@ export default function Hero() {
         className="absolute top-1/3 -right-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none"
       />
 
-      {/* ── Main Content Container ── */}
+      {/* -- Main Content Container -- */}
       <motion.div
         style={{ scale, opacity, y }}
         className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center"
       >
-        {/* ─── LEFT COLUMN: Typography & Actions (7 cols) ─── */}
+        {/* --- LEFT COLUMN: Typography & Actions (7 cols) --- */}
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -251,7 +251,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* ─── RIGHT COLUMN: Interactive 3D Developer Terminal (5 cols) ─── */}
+        {/* --- RIGHT COLUMN: Interactive 3D Developer Terminal (5 cols) --- */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -493,7 +493,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* ── Scroll Indicator ── */}
+      {/* -- Scroll Indicator -- */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

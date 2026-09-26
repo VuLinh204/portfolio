@@ -1,5 +1,5 @@
 // ============================================================
-// Portfolio Data — single source of truth for all content
+// Portfolio Data - single source of truth for all content
 // ============================================================
 
 export const PERSONAL = {
@@ -10,7 +10,7 @@ export const PERSONAL = {
   phone: "+84 364 704 715",
   github: "https://github.com/VuLinh204",
   tagline:
-    "Software Developer with 1+ year building HR web applications — employee management, LMS, task workflows, and AI-assisted recruitment tools.",
+    "Software Developer with 1+ year building HR web applications - employee management, LMS, task workflows, and AI-assisted recruitment tools.",
   cvUrl: "/VuNgocKhanhLinh_Software_Developer.pdf",
 };
 
@@ -122,7 +122,7 @@ export const EXPERIENCE = [
   {
     company: "Vietinsoft",
     role: "Software Developer",
-    period: "Mar 2025 – May 2026",
+    period: "Mar 2025 - May 2026",
     location: "Ho Chi Minh City, Vietnam",
     highlights: [
       "Built HR web apps: employee records, training modules, task management, and recruitment content generation",
@@ -153,7 +153,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: "gymgear-app",
-    title: "GymGear — Social Review & Equipment Booking Platform",
+    title: "GymGear - Social Review & Equipment Booking Platform",
     role: "Full-Stack Developer",
     period: "2026",
     demo: "https://gymgear-app.vercel.app/",
@@ -184,9 +184,9 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "paradise-hr",
-    title: "ParadiseHR — LMS & Task Management",
+    title: "ParadiseHR - LMS & Task Management",
     role: "Software Developer",
-    period: "2025 – 2026",
+    period: "2025 - 2026",
     tech: [
       "JavaScript",
       "jQuery",
@@ -214,7 +214,7 @@ export const PROJECTS: Project[] = [
     id: "ai-recruitment",
     title: "AI Recruitment Tools & Landing Page",
     role: "Front-End Developer",
-    period: "Aug – Oct 2025",
+    period: "Aug - Oct 2025",
     tech: [
       "PHP",
       "JavaScript",
@@ -226,7 +226,7 @@ export const PROJECTS: Project[] = [
       "Gemini API",
     ],
     problem:
-      "HR teams spent hours manually crafting job descriptions and interview question sets — a repetitive, inconsistent, and error-prone process.",
+      "HR teams spent hours manually crafting job descriptions and interview question sets - a repetitive, inconsistent, and error-prone process.",
     contribution:
       "Led front-end development and AI API integration for phanmemtinhluong.com; owned the full pipeline from prompt engineering to UI rendering.",
     outcome:
@@ -242,9 +242,9 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "vao-ca",
-    title: "Vao Ca — HR Attendance & Payroll App",
+    title: "Vao Ca - HR Attendance & Payroll App",
     role: "Full-Stack Developer",
-    period: "Mar – Jul 2025",
+    period: "Mar - Jul 2025",
     tech: [
       "JavaScript",
       "jQuery",
@@ -273,8 +273,8 @@ export const PROJECTS: Project[] = [
 export const EDUCATION = [
   {
     school: "Thu Duc College of Technology (TDC)",
-    degree: "College Diploma — Information Technology",
-    period: "Sep 2022 – Feb 2025",
+    degree: "College Diploma - Information Technology",
+    period: "Sep 2022 - Feb 2025",
     location: "Ho Chi Minh City, Vietnam",
   },
 ];
